@@ -1,6 +1,9 @@
-import React, {useState} from "react"
+import React, {useState, useEffect } from "react"
 import {AiFillApple} from "react-icons/ai"
 import Todo from "./Todo"
+import { db } from "./firebase"
+import { query, collection } from "firebase/firestore"
+
 
 const style = {
   bg: `h-screen w-screen p-4 bg-gradient-to-r from-[#2F80ED] to-[#1CB5E0]`,
@@ -14,7 +17,24 @@ const style = {
 
 
 function App() {
-  const [todos,] =  useState(["Lean React", "Grind Leetcode" ])
+  const [todos, setTodos] =  useState(["Lean React", "Grind Leetcode" ])
+
+
+//create Todo
+
+//read Todo in firebase
+useEffect(()=>{
+const q = query(collection(db, "todos"))
+const unsubscribe = onSnapshot(q, (querySnapshot)=>{
+  let todo = []
+})
+},[])
+
+//update Todo in firebase
+
+
+
+// delete Todo
 
   return (
     <div className={style.bg}>
