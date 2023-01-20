@@ -13,7 +13,7 @@ function App() {
   return (
     <div className={style.bg}>
       <div className={style.container}>
-        <h3 className={style.heading}> Todo App
+        <h3 className={style.heading}> Todo App </h3>
           <form className={style.form}>
             <input className={style.input} type="text" placeholder="Addd Todo" ></input>
             <button className={style.button}><AiFillApple size={30} /></button>
@@ -23,7 +23,7 @@ function App() {
               <Todo key={index} todo={todo}/>
             ))}
           </ul>
-        </h3>
+          <p className={style.count}> You have 2 todos</p>
       </div>
     </div>
   );
