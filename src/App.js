@@ -2,7 +2,7 @@ import React, {useState, useEffect } from "react"
 import {AiFillApple} from "react-icons/ai"
 import Todo from "./Todo"
 import { db } from "./firebase"
-import { query, collection } from "firebase/firestore"
+import { query, collection,onSnapshot } from "firebase/firestore"
 
 
 const style = {
@@ -17,7 +17,7 @@ const style = {
 
 
 function App() {
-  const [todos, setTodos] =  useState(["Lean React", "Grind Leetcode" ])
+  const [todos, setTodos] =  useState([])
 
 
 //create Todo
@@ -26,8 +26,13 @@ function App() {
 useEffect(()=>{
 const q = query(collection(db, "todos"))
 const unsubscribe = onSnapshot(q, (querySnapshot)=>{
-  let todo = []
+  let todosArr = []
+  querySnapshot.forEach((doc) => {
+    todosArr.push({...doc.data(), id: doc.id})
+  });
+  setTodos(todosArr)
 })
+return () => unsubscribe()
 },[])
 
 //update Todo in firebase
