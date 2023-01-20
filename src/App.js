@@ -51,7 +51,7 @@ return () => unsubscribe()
           </form>
           <ul>
             {todos.map((todo, index) => (
-              <Todo key={index} todo={todo}/>
+              <Todo key={index} todo={todo} toggleComplete={toggleComplete}/>
             ))}
           </ul>
           <p className={style.count}> You have 2 todos</p>
