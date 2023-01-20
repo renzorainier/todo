@@ -8,13 +8,15 @@ const style = {
   heading: `text 3-l font-bold text-center text-gray-800 p-2`,
   form: `flex justify-between`,
   input: `border p-2 w-full text-wl`,
-  button: `border p-4 ml-2 bg-purple-500`
+  button: `border p-4 ml-2 bg-cyan-500 text-slate-100`,
+  count: `text-center p-2`
+
 
 }
 
 
 function App() {
-  const [todos, setTodos] =  useState(["Lean React", "Grind Leetcode" ])
+  const [todos,] =  useState(["Lean React", "Grind Leetcode" ])
 
   return (
     <div className={style.bg}>
