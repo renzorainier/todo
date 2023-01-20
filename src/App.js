@@ -8,7 +8,14 @@ const style = {
 function App() {
   return (
     <div className={style.bg}>
-      <div></div>
+      <div className={style.container}>
+        <h3 className={style.heading}> Todo App
+          <form className={style.form}>
+            <input className={style.input} type="text" placeholder="Addd Todo" ></input>
+            <button className={style.button}></button>
+          </form>
+        </h3>
+      </div>
     </div>
   );
 }
