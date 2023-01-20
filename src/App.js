@@ -19,7 +19,9 @@ function App() {
             <button className={style.button}><AiFillApple size={30} /></button>
           </form>
           <ul>
-            <Todo />
+            {todos.map((todo) => (
+              <Todo key={index} todo={todo}/>
+            ))}
           </ul>
         </h3>
       </div>
