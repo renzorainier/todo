@@ -10,9 +10,7 @@ const style = {
   input: `border p-2 w-full text-wl`,
   button: `border p-4 ml-2 bg-cyan-500 text-slate-100`,
   count: `text-center p-2`
-
-
-}
+};
 
 
 function App() {
