@@ -8,7 +8,7 @@ const style = {
 function App() {
   return (
     <div className={style.bg}>
-
+      <div></div>
     </div>
   );
 }
