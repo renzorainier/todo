@@ -1,5 +1,6 @@
-import React from "react"
+import React, {useState} from "react"
 import {AiFillApple} from "react-icons/ai"
+import Todo from "./Todo"
 
 const style = {
   bg: `h-screen w-sscreen p-4 bg-gradient-to-r from-[#2F80ED] to-[#1CB5E0]`
@@ -7,6 +8,8 @@ const style = {
 
 
 function App() {
+  const [todos, setTodos] =  useState(["Lean React", "Grind Leetcode" ])
+
   return (
     <div className={style.bg}>
       <div className={style.container}>
@@ -16,7 +19,7 @@ function App() {
             <button className={style.button}><AiFillApple size={30} /></button>
           </form>
           <ul>
-            
+            <Todo />
           </ul>
         </h3>
       </div>
