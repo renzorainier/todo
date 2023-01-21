@@ -8,6 +8,8 @@ const style = {
   text: `ml-2 cursor-pointer`,
   textComplete: `ml-2 cursor-pointer line-through `,
   button: `cursor-pointer flex items-center`,
+
+
 };
 
 const Todo = ({ todo, toggleComplete, deleteTodo }) => {
