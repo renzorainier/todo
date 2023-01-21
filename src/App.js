@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react"
-import { AiOutlineUserAdd } from "react-icons/ai"
+import { AiTwotonePlusSquare } from "react-icons/ai"
 import Todo from "./Todo"
 import { db } from "./firebase"
 import { query, collection, onSnapshot, updateDoc , doc, addDoc, deleteDoc} from "firebase/firestore"
@@ -76,7 +76,7 @@ const deleteTodo = async(id) => {
             type="text"
             placeholder="Addd Todo"
             />
-            <button className={style.button}><AiOutlineUserAdd size={40} /></button>
+            <button className={style.button}><AiTwotonePlusSquare size={40} /></button>
           </form>
           <ul>
             {todos.map((todo, index) => (
