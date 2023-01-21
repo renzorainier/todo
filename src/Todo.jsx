@@ -21,6 +21,6 @@ const Todo = ({todo, toggleComplete, deleteTodo}) => {
         <button onClick={() => deleteTodo(todo.id)}>{<FaRegTrashAlt />}</button>
     </li>
   )
-}ou have 1 todos
+}
 
 export default Todo
