@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react"
-import { AiTwotonePlusSquare } from "react-icons/ai"
+import { AiFillCloud } from "react-icons/ai"
 import Todo from "./Todo"
 import { db } from "./firebase"
 import { query, collection, onSnapshot, updateDoc , doc, addDoc, deleteDoc} from "firebase/firestore"
@@ -76,7 +76,7 @@ const deleteTodo = async(id) => {
             type="text"
             placeholder="Addd Todo"
             />
-            <button className={style.button}><AiTwotonePlusSquare size={40} /></button>
+            <button className={style.button}><AiFillCloud size={40} /></button>
           </form>
           <ul>
             {todos.map((todo, index) => (
@@ -88,8 +88,7 @@ const deleteTodo = async(id) => {
               />
             ))}
           </ul>
-          {todos.length < 1 ?  null : <p className={style.count}> {`You have ${todos.length} todos`} </p>
-}
+          {todos.length < 1 ?  null : <p className={style.count}> {`You have ${todos.length} todos`} </p>}
       </div>
     </div>
   );
