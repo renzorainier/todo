@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react"
 import { AiFillApple } from "react-icons/ai"
 import Todo from "./Todo"
 import { db } from "./firebase"
-import { query, collection, onSnapshot, updateDoc , doc } from "firebase/firestore"
+import { query, collection, onSnapshot, updateDoc , doc, addDoc} from "firebase/firestore"
 
 
 const style = {
@@ -17,15 +17,22 @@ const style = {
 
 
 function App() {
-  const [todos, setTodos] =  useState([])
-  const [input, setInput] = useState("")
+  const [todos, setTodos] =  useState([]);
+  const [input, setInput] = useState("");
 
 
 //create Todo
 const createTodo = async (e) => {
   e.preventDefault(e)
-
-}
+  if (input === ""){
+    alert("Please enter a valid todo")
+    return
+  }
+  await addDoc(collection(db, "todos")){
+    text: input,
+    completed: false,
+  }
+};
 
 
 //read Todo in firebase
