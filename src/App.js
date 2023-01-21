@@ -1,5 +1,5 @@
-import React, {useState, useEffect } from "react"
-import {AiFillApple} from "react-icons/ai"
+import React, { useState, useEffect } from "react"
+import { AiFillApple } from "react-icons/ai"
 import Todo from "./Todo"
 import { db } from "./firebase"
 import { query, collection,onSnapshot } from "firebase/firestore"
