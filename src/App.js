@@ -18,9 +18,15 @@ const style = {
 
 function App() {
   const [todos, setTodos] =  useState([])
+  const [input, setInput] = useState("")
 
 
 //create Todo
+const createTodo = async (e) => {
+  e.preventDefault(e)
+
+}
+
 
 //read Todo in firebase
 useEffect(()=>{
@@ -51,8 +57,13 @@ const toggleComplete = async (todo) => {
     <div className={style.bg}>
       <div className={style.container}>
         <h3 className={style.heading}> Todo App </h3>
-          <form className={style.form}>
-            <input className={style.input} type="text" placeholder="Addd Todo" ></input>
+          <form onSubmit={createTodo} className={style.form}>
+            <input value={input}
+            onChange={(e) => setInput(e.target.value)}
+            className={style.input}
+            type="text"
+            placeholder="Addd Todo"
+            />
             <button className={style.button}><AiFillApple size={30} /></button>
           </form>
           <ul>
