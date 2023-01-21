@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react"
 import { AiFillApple } from "react-icons/ai"
 import Todo from "./Todo"
 import { db } from "./firebase"
-import { query, collection,onSnapshot } from "firebase/firestore"
+import { query, collection, onSnapshot, updateDoc , doc } from "firebase/firestore"
 
 
 const style = {
@@ -37,6 +37,12 @@ return () => unsubscribe()
 
 //update Todo in firebase
 
+const toggleComplete = async (todo) => {
+  await updateDoc(doc(db, "todos", todo.id), {
+    completed: !todo.completed
+  })
+
+}
 
 
 // delete Todo
