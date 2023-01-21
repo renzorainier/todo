@@ -10,6 +10,7 @@ const style = {
   button: `cursor-pointer flex items-center`,
 
 
+  
 };
 
 const Todo = ({ todo, toggleComplete, deleteTodo }) => {
