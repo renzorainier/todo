@@ -23,15 +23,16 @@ function App() {
 
 //create Todo
 const createTodo = async (e) => {
-  e.preventDefault(e)
-  if (input === ""){
+  e.preventDefault(e);
+  if(input === ""){
     alert("Please enter a valid todo")
     return
   }
-  await addDoc(collection(db, "todos")){
+  await addDoc(collection(db, "todos"), {
     text: input,
     completed: false,
-  }
+  })
+  setInput("")
 };
 
 
