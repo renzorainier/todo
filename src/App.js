@@ -76,7 +76,7 @@ const deleteTodo = async(id) => {
             type="text"
             placeholder="Addd Todo"
             />
-            <button className={style.button}><AiFillApple size={30} /></button>
+            <button className={style.button}><AiFillApple size={40} /></button>
           </form>
           <ul>
             {todos.map((todo, index) => (
