@@ -79,7 +79,7 @@ const toggleComplete = async (todo) => {
               <Todo key={index} todo={todo} toggleComplete={toggleComplete}/>
             ))}
           </ul>
-          <p className={style.count}> You have 2 todos</p>
+          <p className={style.count}> {`You have ${todos.length} todos`} </p>
       </div>
     </div>
   );
